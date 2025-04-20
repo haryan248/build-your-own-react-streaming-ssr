@@ -83,12 +83,13 @@ export function transformResponseStream({ element }: { element: React.ReactEleme
 
     try {
       let chunk;
+
       while (!(chunk = await reader.read()).done) {
         const decodedChunk = decodeChunk(chunk.value);
+
         corePassthrough.write(decodedChunk);
       }
     } catch (error) {
-      console.log("@error", error);
       corePassthrough.destroy(error);
     } finally {
       corePassthrough.write(trailer);
