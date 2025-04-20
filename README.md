@@ -6,11 +6,9 @@ We're going to write super simple React Server Component(RSC) framework.
 
 ## Get started
 
-### Installation
-
 Please follow these steps to get started:
 
-1. Fork and clone this repository
+1. Clone this repository
 
 ```bash
 git clone https://github.com/mugglim/build-your-own-rsc-framework
