@@ -1,8 +1,12 @@
 {
-  "name": "build-your-own-rsc-framework",
+  "name": "build-your-own-react-streaming-ssr",
+  "homepage": "https://github.com/mugglim/build-your-own-react-streaming-ssr",
   "type": "module",
   "scripts": {
     "dev": "tsx --watch --tsconfig ./tsconfig.node.json src/index.ts",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -25,6 +29,7 @@
     "prettier": "^3.5.3",
     "tsx": "^4.7.1",
     "typescript": "~5.7.2",
-    "typescript-eslint": "^8.24.1"
+    "typescript-eslint": "^8.24.1",
+    "vitepress": "^1.6.3"
   }
 }
