@@ -7,7 +7,7 @@
 
 전체적인 구조는 다음과 같습니다.
 
-<img src="./flow.png">
+![flow](./flow.png)
 
 ## 서버 구성하기
 
@@ -240,20 +240,25 @@ App 컴포넌트가 Streaming SSR 기반으로 렌더링 된 결과를 살펴봅
 
 ### 초기 렌더링
 
-Suspense 영역은 loading... 으로 표기되고, 나머지 영역이 DOM에 반영된 것을 확인할 수 있습니다.
+- Suspense 영역은 loading으로 표기되고, 나머지 영역은 초기 HTML에 포함됐습니다.
+- index.html 요청에 대한 커넥션이 유지되고 있습니다.
+
+![init-render](./streaming-ssr-init-render.png)
 
 <img src="./streaming-ssr-init-render.png">
 
 ### 최종 렌더링
 
-초기 렌더링 후 2초가 뒤 TodoList 목록이 DOM에 표시된 것을 확인할 수 있습니다. 추가로 HTML 응답 결과를 확인해보면, `$RC` 함수를 통해 `B:0` 영역의 요소에 `S:0` 요소로 치환된 코드를 확인해볼 수 있습니다.
+- 2초 뒤 TodoList 목록이 HTML 응답에 포함됐습니다.
+- index.html 요청에 대한 커넥션이 종료됐습니다.
+- DOM 요소에 `$RC` 함수를 통해 `B:0` 영역의 요소가 `S:0` 요소로 치환됐습니다.
 
-<img src="./streaming-ssr-final-render.png">
+![final-render](./streaming-ssr-final-render.png)
 
 > [!TIP] B:0, S:0, $RC 태그는 무엇인가요?
 >
 > - `B:0`, `S:0`, `$RC` React Fizz에서 사용하는 용어입니다.
-> - Fizz는 서버에서 React 컴포넌트를 스트리밍 렌더링하는 시스템입니다.
+> - Fizz는 서버에서 React 컴포넌트를 렌더링하는 시스템입니다.
 > - Fizz는 초기 HTML과 함께 B:0(Boundary 시작), S:0(Segment 시작), $RC(React Component 렌더링) 같은 명령어를 전송합니다.
-> - 브라우저는 스트림을 따라 준비된 컴포넌트를 점진적으로 렌더링하고, 서버에서도 Suspense를 지원합니다.
+> - 브라우저는 stream에 준비된 컴포넌트를 점진적으로 렌더링하고 서버에서도 Suspense를 지원합니다.
 > - 관련 코드는 https://github.com/facebook/react/tree/main/packages/react-server 에서 확인하실 수 있습니다.
