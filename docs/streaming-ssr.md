@@ -7,7 +7,7 @@
 
 전체적인 구조는 다음과 같습니다.
 
-![flow](./flow.png)
+![flow](/flow.png)
 
 ## 서버 구성하기
 
@@ -243,9 +243,7 @@ App 컴포넌트가 Streaming SSR 기반으로 렌더링 된 결과를 살펴봅
 - Suspense 영역은 loading으로 표기되고, 나머지 영역은 초기 HTML에 포함됐습니다.
 - index.html 요청에 대한 커넥션이 유지되고 있습니다.
 
-![init-render](./streaming-ssr-init-render.png)
-
-<img src="./streaming-ssr-init-render.png">
+![init-render](/streaming-ssr-init-render.png)
 
 ### 최종 렌더링
 
@@ -253,7 +251,7 @@ App 컴포넌트가 Streaming SSR 기반으로 렌더링 된 결과를 살펴봅
 - index.html 요청에 대한 커넥션이 종료됐습니다.
 - DOM 요소에 `$RC` 함수를 통해 `B:0` 영역의 요소가 `S:0` 요소로 치환됐습니다.
 
-![final-render](./streaming-ssr-final-render.png)
+![final-render](/streaming-ssr-final-render.png)
 
 > [!TIP] B:0, S:0, $RC 태그는 무엇인가요?
 >
