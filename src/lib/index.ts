@@ -8,7 +8,7 @@ const delay = (timeout = 2_000) => {
  * From https://jsonplaceholder.typicode.com/
  */
 export const getTodoList = async () => {
-  await delay(5000);
+  await delay(2_000);
 
   return [
     {

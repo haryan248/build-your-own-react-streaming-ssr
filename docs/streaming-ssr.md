@@ -31,7 +31,7 @@ app.get("/", (ctx) => {
 });
 ```
 
-개발 서버를 실행한 후, http://localhost:3000에 접속하면 "Hello World" 문자열이 반환됩니다.
+개발 서버를 실행한 후 http://localhost:3000 접속하면 "Hello World" 문자열이 반환됩니다.
 
 ## 컴포넌트 작성하기
 
@@ -160,7 +160,7 @@ router.get("/", async () => {
 > - `onShellReady` 함수가 호출되기 전 HTML의 기본구조 `<!DOCTYPE html>`, `<html>` 등을 chunk로 전송해야 합니다.
 
 > [!TIP] 왜 PassThrough을 사용하나요?
-> stream 을 직접 제어하려고 [PassThrough](https://nodejs.org/api/stream.html#class-streampassthrough) 기반으로 stream을 중계합니다.
+> stream을 직접 제어하기 위해 [PassThrough](https://nodejs.org/api/stream.html#class-streampassthrough) 기반으로 stream을 중계합니다.
 
 ### 브라우저에 stream 전달하기
 
