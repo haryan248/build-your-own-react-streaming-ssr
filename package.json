@@ -3,7 +3,7 @@
   "homepage": "https://github.com/mugglim/build-your-own-react-streaming-ssr",
   "type": "module",
   "scripts": {
-    "dev": "tsx --watch --tsconfig ./tsconfig.node.json src/index.ts",
+    "dev": "tsx --watch --tsconfig ./tsconfig.node.json src/server.ts",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",

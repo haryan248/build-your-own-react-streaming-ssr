@@ -10,27 +10,32 @@ We're going to write super simple React Steaming SSR(Server Side Rendering).
 
 Please follow these steps to get started:
 
-1. Clone this repository
+### Installation
 
-```bash
-git clone https://github.com/mugglim/build-your-own-rsc-framework
-cd build-your-own-rsc-framework
-```
+- Clone this repository
+  ```bash
+  git clone https://github.com/mugglim/build-your-own-rsc-framework
+  cd build-your-own-rsc-framework
+  ```
+- Install package
+  ```bash
+  npm install
+  ```
 
-2. Install package
-
-```bash
-npm install
-```
-
-3. Run dev server
+### Run dev server
 
 ```bash
 # The dev server will run on https://localhost:3000 by default
 npm run dev
 ```
 
-4. Now you can visit https://localhost:3000 in the browser.
+Now you can visit https://localhost:3000 in the browser.
+
+### Run docs dev server
+
+```bash
+npm run docs:dev
+```
 
 ## Reference
 
