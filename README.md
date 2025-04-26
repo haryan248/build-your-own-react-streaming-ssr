@@ -1,8 +1,10 @@
-# Build Your Own RSC Framework ⚛️
+# Build Your Own React Streaming SSR ⚛️
+
+[한국어](https://mugglim.github.io/build-your-own-react-streaming-ssr)
 
 ## Introduction
 
-We're going to write super simple React Server Component(RSC) framework.
+We're going to write super simple React Steaming SSR(Server Side Rendering).
 
 ## Get started
 
