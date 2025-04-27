@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-export const ClientComponent = () => {
+export const HydrationTest = () => {
   const handleClick = () => {
     console.log("클릭!");
   };

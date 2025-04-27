@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 
 import { getTodoList } from "./lib";
-import { ClientComponent } from "./clientComponent";
+import { HydrationTest } from "./HydrationTest";
 
 /**
  * From https://jsonplaceholder.typicode.com/
@@ -16,7 +16,7 @@ async function TodoList() {
         return (
           <li key={todoItem.id}>
             {todoItem.title}
-            <ClientComponent />
+            <HydrationTest />
           </li>
         );
       })}
