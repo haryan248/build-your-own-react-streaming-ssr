@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 
 import { getTodoList } from "./lib";
+import { ClientComponent } from "./clientComponent";
 
 /**
  * From https://jsonplaceholder.typicode.com/
@@ -12,7 +13,12 @@ async function TodoList() {
   return (
     <ul>
       {todoList.map((todoItem) => {
-        return <li key={todoItem.id}>{todoItem.title}</li>;
+        return (
+          <li key={todoItem.id}>
+            {todoItem.title}
+            <ClientComponent />
+          </li>
+        );
       })}
     </ul>
   );
