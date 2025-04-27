@@ -31,7 +31,7 @@ app.get("/", (ctx) => {
 });
 ```
 
-개발 서버를 실행한 후 http://localhost:3000 접속하면 "Hello World" 문자열이 반환됩니다.
+개발 서버를 실행한 후 `http://localhost:3000` 접속하면 "Hello World" 문자열이 반환됩니다.
 
 ## 컴포넌트 작성하기
 
